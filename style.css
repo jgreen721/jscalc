@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&Roboto+Mono:wght@100display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --primary-color:rgb(46, 115, 241);
+    --secondary-color:rgb(226, 215, 215);
+}
+
+body{
+    position:relative;
+    font-family: 'Roboto Mono', monospace;
+    background:rgb(0, 80, 228);
+}
+
+.main-container{
+    height:90vh;
+    width:90vw;
+    position:absolute;
+    border:1px solid black;
+    left:5vw;
+    top:5vh;
+    border-radius:5%;
+    background:var(--primary-color)
+
+}
+
+.calc-header{
+    padding:.5em;
+}
+
+.text-center{
+    text-align:center;
+}
+
+
+.display-screen{
+    height:10%;
+    width:90%;
+    border:1px solid black;
+    margin:0 auto;
+    background:var(--secondary-color);
+    font-family: 'Orbitron', sans-serif;
+    position:relative;
+  
+}
+
+.query-string{
+    font-size:35px;
+    position:relative;
+    float:right;
+    padding:.25em;
+}
+
+.buttons-div{
+    width:90%;
+    height:75%;
+    border:1px solid black;
+    position:absolute;
+    left:5%;
+    margin-top:15px;
+}
+
+
+.mt-5{
+    margin-top:15px;
+}
+.flex{
+    display:flex;
+    height:10%;
+}
+
+.space-between{
+    justify-content: space-between;
+    align-items:center;
+}
+
+.calc-btn, .grid-btn{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    width:30%;
+    height:100%;
+    border:1px solid black;
+    margin:10px;
+    background:var(--secondary-color);
+    cursor:pointer;
+    transition:1s ease;
+    border-radius:100px;
+}
+
+
+
+.grid-btn:hover{
+    transform:scale(.99);
+    box-shadow:1px 0px 2px black;
+    background:white;
+
+}
+
+.equal{
+    background:rgb(80, 76, 76);
+    color:white;
+}
+
+[data-power]{
+    background:green;
+}
+
+.clear{
+    background:red;
+}
+
+.grid-btn{
+    width:80%;
+    height:100%;
+}
+
+.grid-panel{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    grid-gap:10px;
+    height:80%;
+    width:100%;
+}
+
+
+@media screen and (max-width:550px){
+    .grid-panel{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    /* .grid-btn{
+        margin:10px;
+    } */
+
+   
+
+}
+
+
+@media screen and (max-width:350px){
+  
+
+    .grid-btn{
+        height:50%;
+    }
+
+}
+
+
